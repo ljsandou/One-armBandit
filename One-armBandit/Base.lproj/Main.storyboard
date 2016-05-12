@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="One_armBandit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-pq-Zyd">
+                                <rect key="frame" x="250" y="306" width="100" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LEq-8u-AoT"/>
+                                    <constraint firstAttribute="width" constant="100" id="pqY-SS-zj5"/>
+                                </constraints>
+                                <state key="normal" title="Just Spin">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="spin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ml0-ZV-nag"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4V1-3R-fbv">
+                                <rect key="frame" x="300" y="580" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axS-zW-7DX">
+                                <rect key="frame" x="0.0" y="40" width="600" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="edJ-pq-Zyd" firstAttribute="centerX" secondItem="axS-zW-7DX" secondAttribute="centerX" id="8uA-qz-RwE"/>
+                            <constraint firstItem="axS-zW-7DX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="JPc-q9-vb5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4V1-3R-fbv" secondAttribute="bottom" constant="20" id="NFI-Vj-RDp"/>
+                            <constraint firstItem="edJ-pq-Zyd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XgB-dw-AgE"/>
+                            <constraint firstItem="edJ-pq-Zyd" firstAttribute="top" secondItem="axS-zW-7DX" secondAttribute="bottom" constant="50" id="Y5K-V0-mTR"/>
+                            <constraint firstItem="edJ-pq-Zyd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a0j-xE-nrI"/>
+                            <constraint firstItem="4V1-3R-fbv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kRB-tK-hrl"/>
+                            <constraint firstItem="axS-zW-7DX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lLr-f4-bkc"/>
+                            <constraint firstAttribute="trailing" secondItem="axS-zW-7DX" secondAttribute="trailing" id="zpe-sm-E1j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8uA-qz-RwE"/>
+                                <exclude reference="XgB-dw-AgE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="axS-zW-7DX" id="3fM-XY-4aM"/>
+                        <outlet property="resultLabel" destination="4V1-3R-fbv" id="Q1e-f8-clt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
